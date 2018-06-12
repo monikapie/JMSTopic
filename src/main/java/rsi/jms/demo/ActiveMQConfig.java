@@ -1,4 +1,4 @@
-package com.example.demo;
+package rsi.jms.demo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -18,7 +18,7 @@ import javax.jms.ConnectionFactory;
 @Configuration
 public class ActiveMQConfig {
 
-    public static final String ORDER_TOPIC = "order-topic";
+    static final String ORDER_TOPIC = "order-topic";
 
     @Bean
     @SuppressWarnings("SpringJavaAutowiringInspection")

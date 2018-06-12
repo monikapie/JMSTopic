@@ -1,4 +1,4 @@
-package com.example.demo;
+package rsi.jms.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
-import static com.example.demo.ActiveMQConfig.ORDER_TOPIC;
 @Service
 public class OrderSender {
 
@@ -17,6 +16,6 @@ public class OrderSender {
 
     public void sendTopic(Order order){
         logger.info("sending with covertAndSend() to topic <" + order + ">");
-        jmsTemplate.convertAndSend(ORDER_TOPIC, order);
+        jmsTemplate.convertAndSend(ActiveMQConfig.ORDER_TOPIC, order);
     }
 }
